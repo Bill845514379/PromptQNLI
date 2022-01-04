@@ -7,7 +7,7 @@ cfg = {
     'epoch': 20,
     'K': 16,
     'Kt': 2000,
-    'template': '[X1] ? [MASK] [X2]',
+    'template': '[X1] ? [MASK] , [X2]',
     'answer': ['no', 'yes'],
     'device': 'cuda',
     'optimizer': 'Adam',
