@@ -25,7 +25,7 @@ for test_id in range(len(seeds)):
     device = torch.device(cfg['device'])
 
 
-    data_X, data_y = load_data(path['neg_path'])
+    data_X, data_y = load_data(path['train_path'])
     train_X, train_y, test_X, test_y = data_split(data_X, data_y, cfg['K'], cfg['Kt'])
     train_X, test_X = X_data2id(train_X, tokenizer), X_data2id(test_X, tokenizer)
     train_y, test_y = get_answer_id(train_y, tokenizer), get_answer_id(test_y, tokenizer)
@@ -160,11 +160,6 @@ for test_id in range(len(seeds)):
             print('test_acc:{}, time:{}'.format( round(acc, 4), time.time()-time0))
             print('============================================'.format(i + 1))
             average_acc += acc
-
-            with open('output/pre_out' + str(test_id) + '.txt', 'w', encoding='utf-8') as file:
-                for j in range(len(label_out)):
-                    file.write(str(label_out[j]))
-                    file.write('\n')
 
 average_acc /= 5
 
