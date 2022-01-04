@@ -5,7 +5,7 @@ from common.text2id import X_data2id, get_answer_id
 import os
 import torch
 from config.cfg import cfg, path, hyper_roberta
-from common.load_data import load_data, tokenizer, data_split
+from common.load_data import load_data, tokenizer, data_split, generate_template
 from model.PromptMask import PromptMask
 import torch.optim as optim
 from transformers import AdamW, get_linear_schedule_with_warmup
@@ -25,7 +25,8 @@ for test_id in range(len(seeds)):
     device = torch.device(cfg['device'])
 
 
-    data_X, data_y = load_data(path['train_path'])
+    data_X1, data_X2, data_y = load_data(path['train_path'])
+    data_X = generate_template(data_X1, data_X2)
     train_X, train_y, test_X, test_y = data_split(data_X, data_y, cfg['K'], cfg['Kt'])
     train_X, test_X = X_data2id(train_X, tokenizer), X_data2id(test_X, tokenizer)
     train_y, test_y = get_answer_id(train_y, tokenizer), get_answer_id(test_y, tokenizer)
