@@ -22,5 +22,5 @@ hyper_roberta = {
 path = {
     'train_path': 'data/QNLI/train.tsv',
     'test_path': 'data/QNLI/test.tsv',
-    'roberta_path': 'pretrained_models/roberta-large'
+    'roberta_path': 'roberta-large'
 }
