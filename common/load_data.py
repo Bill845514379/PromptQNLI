@@ -37,7 +37,7 @@ def generate_template(data_X_1, data_X_2):
     for i in range(len(data_X_1)):
         template = cfg['template']
 
-        template = template.replace('[X1]', CLS + ' ' + data_X_1[i])
+        template = template.replace('[X1]', CLS + ' ' + data_X_1[i] + ' ' + SEP)
         template = template.replace('[X2]', SEP + ' ' + data_X_2[i] + ' ' + SEP)
         template = template.replace('[MASK]', MASK)
 
