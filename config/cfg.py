@@ -9,7 +9,7 @@ cfg = {
     'Kt': 2000,
     # 'template': '[X1] [X2] Their semantics are [MASK].',
     'template': '[X1] ? [MASK] , [X2]',
-    'answer': ['different', 'similar'],
+    'answer': ['No', 'Yes'],
     'device': 'cuda',
     'optimizer': 'Adam',
     'word_size': 50265
