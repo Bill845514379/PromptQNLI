@@ -166,4 +166,4 @@ for test_id in range(len(seeds)):
 
 average_acc /= 5
 acc_array = np.array(acc_array)
-print('average_acc:{}, std:{}'.format(round(average_acc, 4),), round(np.std(acc_array, ddof=1), 4))
+print('average_acc:{}, std:{}'.format(round(average_acc, 4), round(np.std(acc_array, ddof=1), 4)))
