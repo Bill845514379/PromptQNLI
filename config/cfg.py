@@ -9,7 +9,7 @@ cfg = {
     'Kt': 500,
     # 'template': '[X1] [X2]? [MASK].',
     'template': '[X1] ? [MASK] , [X2]',
-    'answer': ['No', 'Entailment'],
+    'answer': ['Other', 'Entailment'],
     'device': 'cuda',
     'optimizer': 'Adam',
     'word_size': 50265
