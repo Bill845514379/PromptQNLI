@@ -106,6 +106,7 @@ for test_id in range(len(seeds)):
             batch_x, batch_y = batch_x.to(device), batch_y.to(device)
 
             output = net(batch_x)
+            print(output, batch_y)
             criterion = nn.CrossEntropyLoss()
             loss = criterion(output, batch_y)
             loss.backward()
