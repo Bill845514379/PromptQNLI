@@ -7,9 +7,9 @@ cfg = {
     'epoch': 10,
     'K': 16,
     'Kt': 500,
-    'template': '[X1] [X2]? [MASK].',
-    # 'template': '[X1] ? [MASK] , [X2]',
-    'answer': ['No', 'Yes'],
+    # 'template': '[X1] [X2]? [MASK].',
+    'template': '[X1] ? [MASK] , [X2]',
+    'answer': ['No', 'Entailment'],
     'device': 'cuda',
     'optimizer': 'Adam',
     'word_size': 50265
