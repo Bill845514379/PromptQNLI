@@ -7,8 +7,8 @@ cfg = {
     'epoch': 10,
     'K': 16,
     'Kt': 2000,
-    'template': '[X1] ? [MASK] , [X2]',
-    'answer': ['no', 'yes'],
+    'template': '[X1] [X2] Their semantics are [MASK].',
+    'answer': ['different', 'similar'],
     'device': 'cuda',
     'optimizer': 'Adam',
     'word_size': 50265
