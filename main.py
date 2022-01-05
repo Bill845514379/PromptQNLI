@@ -29,7 +29,7 @@ for test_id in range(len(seeds)):
     data_X1, data_X2, data_y = load_data(path['train_path'])
     data_X = generate_template(data_X1, data_X2)
     train_X, train_y, test_X, test_y = data_split(data_X, data_y, cfg['K'], cfg['Kt'])
-    print(train_X)
+
     train_X, test_X = X_data2id(train_X, tokenizer), X_data2id(test_X, tokenizer)
     train_y, test_y = get_answer_id(train_y, tokenizer), get_answer_id(test_y, tokenizer)
 
