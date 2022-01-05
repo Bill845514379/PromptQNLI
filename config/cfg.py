@@ -7,7 +7,7 @@ cfg = {
     'epoch': 10,
     'K': 16,
     'Kt': 500,
-    'template': '[X1] [X2] </s> Their semantics are [MASK]. </s>',
+    'template': '[X1] [X2] Their semantics are [MASK].',
     # 'template': '[X1] ? [MASK] , [X2]',
     'answer': ['different', 'similar'],
     'device': 'cuda',
