@@ -164,7 +164,7 @@ for test_id in range(len(seeds)):
             print('test_acc:{}, time:{}'.format( round(acc, 4), time.time()-time0))
             print('============================================'.format(i + 1))
             average_acc += acc
-            acc_array.append(acc)
+            acc_array.append(acc * 100)
 
 average_acc /= 5
 acc_array = np.array(acc_array)
